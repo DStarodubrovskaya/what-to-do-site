@@ -1,0 +1,187 @@
+/* Most of the code was inspired or taken from W3School */
+body {
+	background: rgba(221, 235, 227);
+	font: 20px 'Assistant';
+}
+
+/* Header */
+header {
+	background: rgba(0, 67, 70);
+	text-align: center;
+	/* I added text shadow for the header */
+	text-shadow: 2px 2px 5px #180D49;
+}
+
+/* Navigation menu */
+nav {
+	/* The fourth number is opacity */
+	background: rgba(0, 67, 70, 0.7);
+	/* I froze the menu at the top border of the site */
+	position: sticky;
+    top: 0;
+	/* I used it, because audio overflowed the menu */
+	z-index: 2; /* Asked Chat GPT for that */
+}
+nav ul {
+	/* I removed bullets from the list */
+    list-style-type: none;
+	margin: 0;
+    /* And centered the list */
+	text-align: center; 
+}
+nav ul li {
+	/* I turned my menu horizontally */
+	display: inline;
+}
+nav ul li a {
+	color: rgba(250, 255, 253);
+	display: inline-block;
+	font-size: 30px;
+	/* I added space around my menu buttons */
+	padding: 15px 20px;
+	text-decoration: none;
+}
+/* Used hover to make menu and links responsive for users */
+nav li a:hover {
+	background: rgba(8, 93, 97, 0.8);
+	color: rgba(253, 229, 139);
+	text-decoration: underline;
+}
+/* Class emphasize the current page in menu bar with underline */ 
+.currentPage {
+	text-decoration: underline;
+}
+
+/* Footer */
+footer ul {
+	background: #004346;
+	/* I removed bullets from the list */
+    list-style-type: none;
+	padding: 0 20px;
+    /* And centered the list */
+	text-align: center; 
+}
+footer ul li {
+	/* I turned my footer horizontally */
+	display: inline-block;
+	color: rgba(253, 229, 139);
+}
+footer ul li a {
+	color: rgba(250, 255, 253);
+	display: inline-block;
+	/* I added space around my menu buttons */
+	margin: 0 25px;
+	padding: 20px 5px;
+	text-decoration: none;
+}
+footer a:hover {
+	background: rgba(142, 219, 182, 0.3);
+	color: rgba(253, 229, 139);
+	text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, nav, table {
+	font-family: 'Amatic SC', sans-serif;
+	margin: 0;
+	/* I centered the headings */
+	text-align: center; 
+}
+h1 {
+	color: rgba(253, 229, 139);
+	/* I took the font family and weight for headings from w3school */
+	font-size: 70px;
+}
+h2, h3, caption, th {
+	font-size: 40px;
+}
+
+/* Content */
+article, table {
+	background: rgba(250, 255, 253);
+	border-radius: 8px; 
+    box-shadow: 5px 10px 18px #888888;
+	margin: 20px auto; 
+	/* Set a fixed width for each article */
+    max-width: 900px; 
+	/* To make sure that image doesn't overflow */
+	overflow: hidden; /* Asked Chat GPT for that */
+    padding: 45px;
+}
+article ol {
+    list-style-type: hebrew;
+}
+/* Table */
+table th, table td {
+	padding: 0 50px;
+	border: 1px solid black;
+}
+.tableName {
+	font-size: 30px;
+}
+.tableLink:hover {
+	transform: scale(1.1);
+	transition: transform 0.2s ease-in-out; /* Asked Chat GPT for that */
+}
+.tableLink:not(:hover) {
+	transition: transform 0.2s ease-in-out;
+}
+
+/* Media */
+img {
+	box-shadow: 5px 5px 10px #888888; /* Add box shadow */
+	float: right;
+	margin: 20px;
+	width: 200px;
+}
+time, summary {
+	color: rgba(31, 183, 136);
+}
+audio {
+    display: block;
+    margin-top: 20px;
+	z-index: 1; /* Asked Chat GPT for that */
+}	
+.empesizedText, strong, .tableName {
+	color: rgba(31, 183, 136);
+	font-weight: bold;
+}
+.citation {
+	font-style: italic;
+}
+.gallery {
+	display: flex;
+    list-style: none;
+	 /* Used it create a scroll effect in gallery */
+	overflow-x: auto; /* Asked Chat GPT for that */
+}
+.logo {
+	float: left;
+}
+
+/* Buttons */
+button {
+	background: rgba(31, 183, 136);
+	border-radius: 5px;
+	color: rgba(250, 255, 253);
+	 /* Made the button a block element */
+	display: block;
+	font-family: 'Amatic SC', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+    margin: auto;
+	padding: 10px 20px;
+}
+button:hover {
+	/* Darken the background color on hover */
+    background: #004346; 
+}
+button:hover, a {
+	transition: all 0.2s ease-in-out;
+}
+
+/* Transition */
+html {
+	 /* Used it to make a transition to the top smoother and nicer */
+	scroll-behavior: smooth; /* Asked Chat GPT for that */
+}
